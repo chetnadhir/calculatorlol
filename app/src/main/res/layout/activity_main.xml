@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#1B263B"
+    >
+    <TextView
+        android:id="@+id/operation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/AC"
+        android:padding="16dp" />
+    <!--edittext-->
+    <TextView
+        android:id="@+id/AC"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/last"
+        android:text="AC"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/seven" />
+
+    <TextView
+        android:id="@+id/plusOrMinus"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/last"
+        android:text="+/-"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/AC"
+        app:layout_constraintBottom_toTopOf="@+id/eight" />
+
+    <TextView
+        android:id="@+id/percent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/last"
+        android:text="%"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/plusOrMinus"
+        app:layout_constraintBottom_toTopOf="@+id/nine" />
+
+    <TextView
+        android:id="@+id/tvdivide"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/last"
+        android:text="/"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/percent"
+        app:layout_constraintBottom_toTopOf="@+id/multiply"
+       />
+
+    <!-- Row 2: 7, 8, 9, Multiply -->
+    <TextView
+        android:id="@+id/seven"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/seveneightnine"
+        android:text="7"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/four" />
+
+    <TextView
+        android:id="@+id/eight"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/seveneightnine"
+        android:text="8"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/seven"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+      />
+
+    <TextView
+        android:id="@+id/nine"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/seveneightnine"
+        android:text="9"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/eight"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        />
+
+    <TextView
+        android:id="@+id/multiply"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/baseline_circle_24"
+        android:text="×"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/nine"
+        app:layout_constraintBottom_toTopOf="@+id/minus"/>
+
+    <!-- Row 3: 4, 5, 6, Minus -->
+    <TextView
+        android:id="@+id/four"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fourfivesix"
+        android:text="4"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        />
+
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fourfivesix"
+        android:text="5"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/four"
+        app:layout_constraintBottom_toTopOf="@+id/two"/>
+
+    <TextView
+        android:id="@+id/six"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fourfivesix"
+        android:text="6"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/five"
+        app:layout_constraintBottom_toTopOf="@+id/three" />
+
+    <TextView
+        android:id="@+id/minus"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/baseline_circle_24"
+        android:text="-"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/six"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        />
+
+    <!-- Row 4: 1, 2, 3, Add -->
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/onetwothree"
+        android:text="1"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintBottom_toTopOf="@+id/period"
+    />
+
+    <TextView
+        android:id="@+id/two"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/onetwothree"
+        android:text="2"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintBottom_toTopOf="@id/equal"
+
+        />
+
+    <TextView
+        android:id="@+id/three"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/onetwothree"
+        android:text="3"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/two"
+        app:layout_constraintBottom_toTopOf="@id/equal"
+        />
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/baseline_circle_24"
+        android:text="+"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/three"
+        app:layout_constraintBottom_toTopOf="@+id/equal"
+        />
+
+    <!-- Row 5: 0, Period, Equals-->
+    <TextView
+       android:id="@+id/zero"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:background="@drawable/spacebar"
+        android:text="0"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/equal"
+        app:layout_constraintBottom_toBottomOf="@+id/equal"
+        app:layout_constraintTop_toTopOf="@+id/equal"
+       />
+
+    <TextView
+        android:id="@+id/period"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/baseline_circle_24"
+        android:text="."
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/equal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/baseline_circle_24"
+        android:text="="
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/period"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+    />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
